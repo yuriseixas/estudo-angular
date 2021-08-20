@@ -1,0 +1,8 @@
+<div *ngIf="!list.length">
+    <p>Lista está vázia</p>
+</div>
+<ul>
+    <li *ngFor="let todo of list">{{todo.name}}
+        <button (click)="removeTask(todo.id)">X</button>
+    </li>
+</ul>

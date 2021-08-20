@@ -1,0 +1,3 @@
+<h1>{{title}}</h1>
+<app-todo-maker (onCreate)="addTodo($event)"></app-todo-maker>
+<app-list-todos [list]="list" (onRemove)="removeTodo($event)"></app-list-todos>
