@@ -1,0 +1,11 @@
+<app-busca-filme (onSearch)="onSearch($event)"></app-busca-filme>
+<div>
+    <ul>
+        <li class="filme" *ngFor="let filme of filmes | async">
+            <img class="poster" src="{{filme.Poster}}">
+            {{filme.Title}}
+            <button (click)="getDetalhe(filme.imdbID)">Detalhes</button>
+            <hr>
+        </li>
+    </ul>
+</div>
